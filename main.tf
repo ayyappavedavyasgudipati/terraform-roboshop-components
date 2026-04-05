@@ -7,8 +7,12 @@ resource "aws_instance" "main" {
   tags = merge(
     {
         Name = "${var.project}-${var.environment}-${var.component}"
+<<<<<<< HEAD
     },
     local.common_tags
+=======
+    }
+>>>>>>> 94d37f5 (initial commit)
   )
 }
 
@@ -180,8 +184,13 @@ resource "aws_autoscaling_policy" "main" {
 
 # This depends on target group
 # if frontend frontend-dev.daws88s.online
+<<<<<<< HEAD
 resource "aws_lb_listener_rule" "main" {
   listener_arn = local.alb_listner_arn
+=======
+resource "aws_lb_listner_rule" "main" {
+  listener_arn = local.alb_listener_arn
+>>>>>>> 94d37f5 (initial commit)
   priority     = var.rule_priority
 
   action {
@@ -206,4 +215,8 @@ resource "terraform_data" "main_delete" {
   provisioner "local-exec" {
     command = "aws ec2 terminate-instances --instance-ids ${aws_instance.main.id} "
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 94d37f5 (initial commit)

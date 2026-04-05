@@ -16,7 +16,11 @@ variable "app_version" {
 }
 
 variable "rule_priority" {
+<<<<<<< HEAD
     
+=======
+  type = number
+>>>>>>> 94d37f5 (initial commit)
 }
 
 variable "domain_name" {

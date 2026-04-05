@@ -13,4 +13,8 @@ locals {
         Environment = var.environment
         Terraform = "true"
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 94d37f5 (initial commit)
